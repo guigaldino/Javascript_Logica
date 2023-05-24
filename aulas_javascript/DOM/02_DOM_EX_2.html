@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+
+    <script>
+
+        //  USUARIO DIGITAR NOME E APARECER EM NEGRITO NA TELA  
+        // TEXT CONTENT = TEXTO PURO
+        // INNER HTML = IGUAL TEXT CONTENT, PORÉM MOSTRAS AS PROPRIEDADES HTML DA MANEIRA CORRETA
+
+        var nome = prompt("Digite seu nome: ")
+        document.querySelector("#output").innerHTML = `Seja bem vindo <b>${nome}</b>`
+
+    </script>
+
+</body>
+
+</html>

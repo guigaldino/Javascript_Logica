@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Desafio calcular media</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <script>
+
+   (function(){
+
+    function calcularMedia(){
+        
+        var total = 0
+        var qtd = arguments.length     
+        
+        for(var i = 0; typeof arguments[i] === 'number'; i++){
+            total += arguments[i]
+        }
+
+        return total / qtd
+    }
+
+        var media1 = calcularMedia(2, 3)
+        var media2 = calcularMedia(4, 0, 10, 10)
+        console.log("Média 1: ", media1)
+        console.log("Média 2: ", media2)
+
+       
+   })()
+
+  
+    </script>
+
+</body>
+
+</html>

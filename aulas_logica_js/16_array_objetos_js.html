@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+  <head>
+    <title>Array objetos</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+   </head>
+ 
+ <body>
+   
+  <div id="output"></div>
+
+  <script>
+
+
+    var produtos = [
+      {'nome': 'caneta', 'preço': 2, 'estoque': 500},
+      {'nome': 'lápis', 'preço': 1, 'estoque': 1000},
+      {'nome': 'borracha', 'preço': 0.50, 'estoque': 800}
+    ]
+
+
+    var msg = ""
+    
+
+    for(var i = 0; i < produtos.length; i++){
+      console.log(produtos[i])
+
+      msg += "<h2> Produto: "+produtos[i].nome+" </h2>"
+      msg+= "<p> Preço: "+produtos[i].preço+" </p>"
+    }
+   
+   
+
+    document.querySelector("#output").innerHTML = msg
+
+
+  </script>
+
+ </body>
+</html>

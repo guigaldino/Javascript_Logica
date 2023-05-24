@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar caracteres</title>
+</head>
+
+<body>
+
+    <h1>Curso Javascript Completo</h1>
+
+    <textarea id="msg" cols="50" rows="10" maxlength="150"></textarea>
+
+    <div id="restaContainer" style="display: none;"> <!-- esconde os erros da página caso de erro no JS -->
+
+        Restam <span id="resta"></span> caracteres
+    </div>
+
+    <script>
+
+        (function () {
+
+            var $txtMsg = document.getElementById('msg') // acessa a caixa de msg
+            var $resta = document.getElementById('resta') // acessa a span do aviso de caracteres
+            var $restaContainer = document.getElementById('restaContainer') // acessa a div container
+
+            var maxCaracteres = $txtMsg.maxLength // máximo de caracteres do text area
+
+            mostrarContainerResta()
+           
+
+            mostrarCaracteresRestantes(maxCaracteres) // atribui o valor que representa o maximo de caracteres na span
+
+            $txtMsg.addEventListener('input', checkLength) // atribui um evento na caixa de msg para checar a quantidade de caracteres digitados.
+
+
+
+           
+           
+           
+          
+            // FUNÇÕES
+           
+            function checkLength(e) { // função que mostra os caracteres disponiveis
+
+                var txtLenght = this.value.length //recupera o número de caracteres digitados
+
+                var caracteresRestantes = parseInt(maxCaracteres - txtLenght)
+                // recupera o valor da subtração do limite de caracteres - caracteres digitados
+
+                mostrarCaracteresRestantes(caracteresRestantes) // exibe a quantidade de caracteres faltantes
+            }
+
+
+
+            function mostrarContainerResta() { 
+                $restaContainer.style.display = 'block' // atribui o estilo CSS pelo JS, utilizado para aparecer o estilo somente se a página carregar o JS.
+            }
+
+            
+
+            function mostrarCaracteresRestantes(n) {
+                $resta.textContent = n
+            }
+
+
+        })()
+
+    </script>
+
+</body>
+
+</html>

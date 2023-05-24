@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <button onclick="mostraArea(altura, largura)">Calcular área</button>
+
+
+    <script>
+
+        var altura = parseInt(prompt("Digite a largura: "))
+        var largura = parseInt(prompt("Digite a altura: "))
+        var resultado = altura * largura
+
+        function mostraArea(l, a) {
+
+            alert(`Largura: ${l}`)
+            alert(`Altura: ${a}`)
+            alert(`A área do terreno é de: ${resultado}`)
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

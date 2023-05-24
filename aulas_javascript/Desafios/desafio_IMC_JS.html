@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Desafio IMC</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <script>
+
+        (function init() {
+
+            function calcularIMC() {
+                var altura = parseFloat(prompt("Digite sua altura: "))
+                var peso = parseFloat(prompt("Digite seu peso: "))
+                return parseInt(peso / altura ** 2)
+
+            }
+
+            function classificarIMC() {
+
+                
+
+                if(resultadoIMC <= 16.9 ){
+                    alert("Classificação: Você está muito abaixo do peso.")
+                }else if(resultadoIMC <= 18.4){
+                    alert("Classificação: Você está abaixo do peso. ")
+                }else if(resultadoIMC <= 24.9){
+                    alert("Classificação: Seu peso está normal.")
+                }else if(resultadoIMC <= 29.9){
+                    alert("Classificação: Você está acima do peso.")
+                }else if(resultadoIMC >= 30){
+                    alert("Classificação: Obesidade")
+                }
+                
+
+            }
+
+
+            var resultadoIMC = calcularIMC()
+            alert(`O resultado do seu IMC é: ${resultadoIMC}`)
+            var classeIMC = classificarIMC()
+            
+
+        })()
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+  <title>Página teste</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Guilherme Galdino">
+  <meta name="description" content="Teste de tags html">
+  <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+  <script>
+
+    var hoje = new Date()
+
+    var x = [0]
+
+    function mudaArr(x) {
+      var y = x
+      y.push(2)
+      x.push(3)
+    }
+
+    mudaArr(x)
+
+    console.log('--------')
+
+    var n = 0
+    function mudaN(n) {
+      var n2 = n
+      console.log(++n)
+    }
+
+    mudaN(n)
+    console.log(n)
+
+
+    console.log('--------')
+
+    function mudarCor(){
+      console.log(this)
+      this.cor = cor  
+    }
+
+    var caneta1 = {
+      cor: 'red',
+      preco: 1,
+      mudarCor: function (cor) {
+        this.cor = cor
+      }
+    }
+    
+    var caneta2 = {
+      cor: 'yellow',
+      preco: 2,
+      mudarCor: function (cor) {
+        this.cor = cor
+      }
+    }
+
+    caneta1.mudarCor('green')
+    console.log(caneta1)
+    console.log(caneta2)
+
+
+
+
+  </script>
+
+</body>
+
+</html>

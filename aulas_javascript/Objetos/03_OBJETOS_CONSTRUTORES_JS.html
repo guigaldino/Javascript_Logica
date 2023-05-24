@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <script>
+
+        // QUANDO FOR CRIAR UMA FUNÇÃO DO TIPO CONSTRUTOR, USAR LETRA MAIUSCULA
+
+        (function (window) {
+            'use strict'
+
+            window.Caneta = function(preco, cor) {
+                var color = cor || 'black'
+                this.preco = preco || 1
+
+                this.mudarCor = function (cor) {
+                    if (cor !== 'red' && cor !== 'blue' && cor !== 'black') {
+                        return;
+                    }
+                    color = cor
+                }
+
+                this.pegaCor = function () {
+
+                    return color;
+                }
+            }
+
+            var caneta1 = new Caneta(2, 'vermelha')
+        })(window)
+
+
+
+    </script>
+
+</body>
+
+</html>

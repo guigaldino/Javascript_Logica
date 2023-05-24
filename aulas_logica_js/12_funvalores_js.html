@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <button onclick="mostrarAreaAlert()">Mostrar área no alert</button>
+    <button onclick="mostrarAreaOutput()">Mostra área no output</button>
+    <div id="output"></div>
+
+    <script>
+
+
+        function calcularArea(l,a){
+            return l * a
+        }
+
+        function mostrarAreaAlert(){
+            var largura = parseInt(prompt("Digite a largura: "))
+            var altura = parseInt(prompt("Digite sua altura: "))
+            var area = calcularArea(largura, altura)
+
+            alert(`Área total: ${area}`)
+            
+        }
+
+        function mostrarAreaOutput(){
+            var largura = parseInt(prompt("Digite a largura: "))
+            var altura = parseInt(prompt("Digite a altura: "))
+            var area = calcularArea(largura, altura)
+
+            document.querySelector('#output').innerHTML = `Área total: ${area}`
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+     <button onclick="calcular('+')">+</button>
+     <button onclick="calcular('-')">-</button>
+     <button onclick="calcular('*')">*</button>
+     <button onclick="calcular('/')">/</button>
+
+     <div id="output"></div>
+
+<body>
+
+   <script>
+
+    var n1 = parseInt(prompt("Digite um número: "))
+    escreva()
+
+
+    function escreva(){
+        var output = document.querySelector("#output")
+        output.innerHTML = n1
+    }
+
+    function calcular(simbolo){
+        var n2 = parseInt(prompt("Digite um número: "))
+
+                switch(simbolo){
+                    case '+': 
+                    n1 += n2  
+                    break
+                   
+                    case '-': 
+                    n1 -= n2  
+                    break
+                   
+                    case '*': 
+                    n1 *= n2  
+                    break
+                   
+                    case '/': 
+                    n1 /= n2  
+                    break
+                }
+
+            escreva()
+    }
+
+   </script>
+ 
+    
+ </body>
+
+</html>

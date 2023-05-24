@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+  <head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+   </head>
+ 
+ <body>
+   
+    <script>
+        
+        var n1 = parseFloat(prompt("Digite a nota 1: "))
+        var n2 = parseFloat(prompt("Digite a nota 2: "))
+        var n3 = parseFloat(prompt("Digite a nota 3: "))
+        var media = parseInt(n1 + n2 + n3) / 3
+
+        if(n1 > 0 && n2 > 0 && n3 > 0 && media > 5){
+            alert(`Sua média foi ${media}, parabéns, você foi aprovado!`)
+        }else{
+            alert(`Sua média foi ${media}, infelizmente você não foi aprovado.`)
+        }
+        if(n1 === 0 || n2 === 0 || n3 === 0){ 
+            alert("Você tirou uma nota 0 em uma das provas do trimestre, você foi automaticamente reprovado.")
+        }
+    
+    </script>
+
+ </body>
+</html>

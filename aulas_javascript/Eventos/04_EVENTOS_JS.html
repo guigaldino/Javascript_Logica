@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+  <head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+   </head>
+ 
+ <body>
+   
+    <button id="btn1" onclick="clicar()">Botão 1</button>
+    <button id="btn2">Botão 2</button>
+    <button id="btn3">Botão 3</button>
+
+ </body>
+
+
+ <Script>
+
+    // DOM LEVEL 0 
+    
+    // var btn2 = document.getElementById('btn2')
+    //     btn2.onclick = clicar
+
+    //     function clicar(){
+    //         alert('Clicou')
+    //     }
+
+
+        // DOM LEVEL 2
+
+            var btn3 = document.getElementById('btn3')
+            btn3.addEventListener("click", function(){
+                alert('Função chamada por DOM 2')
+            })
+           
+            btn3.addEventListener("click", function(){
+                alert('Função chamada por DOM 2 com outro evento')
+            })
+
+ </Script>
+</html>

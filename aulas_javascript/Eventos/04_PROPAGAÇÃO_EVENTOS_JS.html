@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Propagação de eventos</h1>
+
+        <div id="d1" style="background: red; padding: 25px;">
+            texto dentro da div
+            <span style="background: yellow;">texto dentro da span</span>
+        </div>
+    </div>
+
+    
+
+</body>
+
+
+<Script>
+
+  
+
+      var $d1 = document.querySelector('#d1')
+      var $d1span = document.querySelector('#d1 span')
+
+      $d1.addEventListener('click', function(){
+       console.log('Click no $d1')
+      }, false)
+
+      $d1span.addEventListener('click', function(){
+        console.log('Click no texto da span')
+      }, false)
+
+      document.addEventListener('click', function(){
+        console.log('clicou no document')
+      }, false)
+
+
+</Script>
+
+</html>

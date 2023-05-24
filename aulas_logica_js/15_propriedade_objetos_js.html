@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+
+<head>
+    <title>Página teste</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Guilherme Galdino">
+    <meta name="description" content="Teste de tags html">
+    <meta name="keywords" content="html5, tecnologia">
+
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+        var produto = new Object()
+        produto.nome = 'caneta'
+        produto.preco = 1
+        produto.estoque = 600
+
+        produto.comprar = function(qtd){
+           
+           if(!qtd){
+            qtd = 1
+           }
+            console.log('comprou caneta')
+            this.estoque = this.estoque - qtd
+            console.log(this.estoque)
+
+
+            
+        }
+
+        var msg = ''
+
+        msg += `produto: ${produto.nome}` + `<br>`
+        msg += `preço: ${produto.preco}` + `<br>`
+        msg += `quantidade em estoque: ${produto.estoque}` 
+
+        document.querySelector("#output").innerHTML = msg
+    </script>
+
+</body>
+
+</html>
